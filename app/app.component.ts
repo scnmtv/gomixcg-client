@@ -33,6 +33,6 @@ export class  CGGoComponent {
         this.socket.emit("config-change", "update -clock "+ this.min +" "+ this.sec + " " + this.msec + " " + this.per);
     }
     setScore (): void {
-        this.socket.emit("config-change", "update -clock "+ this.min +" "+ this.sec + " " + this.msec + " " + this.per);
+        this.socket.emit("config-change", "update -score "+ this.scoreHome +" "+ this.scoreAway);
     }
 }
