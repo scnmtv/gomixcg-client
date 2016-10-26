@@ -20,6 +20,7 @@ var CGGoComponent = (function () {
         this.scoreHome = 0;
         this.scoreAway = 0;
         this.per = "1";
+        this.connect();
     }
     CGGoComponent.prototype.connect = function () {
         this.socket = io.connect(this.socketUrl);

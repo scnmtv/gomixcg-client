@@ -15,6 +15,10 @@ export class  CGGoComponent {
     scoreAway: number = 0;
     per = "1";
 
+    constructor () {
+        this.connect()
+    }
+
     connect () {
         this.socket = io.connect(this.socketUrl);
         this.socket.on('connect', function () {
