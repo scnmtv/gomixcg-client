@@ -1,0 +1,33 @@
+<h1>Socket status: <span [class]="socketConnected?'text-success':'text-danger'"><i class="fa fa-circle"></i></span></h1>
+<h4 [hidden]="!socketConnected">Connected to <code>{{socketUrl}}</code></h4>
+
+<div [hidden]="socketConnected">
+	<div class="input-group">
+		<span class="input-group-addon"><b>Socket address:</b></span>
+		<input type="text" class="form-control" [(ngModel)]="socketUrl">
+		<span class="input-group-btn"><button (click)="connect()" class="btn btn-success">Connect</button></span>
+	</div>
+</div>
+<div [hidden]="!socketConnected">
+	<h2>Time Set</h2>
+	<div class="input-group">
+			<input type="number" class="form-control" [(ngModel)]="min">
+			<span class="input-group-addon">:</span>
+			<input type="number" class="form-control" [(ngModel)]="sec">
+			<span class="input-group-addon">.</span>
+			<input type="number" class="form-control" [(ngModel)]="msec">
+			<span class="input-group-addon">P:</span>
+			<input type="text" class="form-control" [(ngModel)]="per">
+			<span class="input-group-btn"><button (click)="setTime()" class="btn btn-success">Send</button></span>
+	</div>
+	<h2>Result Set</h2>
+	<div class="input-group">
+			<span class="input-group-addon">Home:</span>
+			<input type="number" class="form-control" [(ngModel)]="scoreHome">
+			<span class="input-group-addon">Away:</span>
+			<input type="number" class="form-control" [(ngModel)]="scoreAway">
+			<span class="input-group-btn"><button (click)="setScore()" class="btn btn-success">Send</button></span>
+	</div>
+	<h2>Enable/Disable stuff</h2>
+	<h2><code>SOON&trade;</code></h2>
+</div>
