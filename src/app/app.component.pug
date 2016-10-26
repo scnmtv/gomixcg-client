@@ -1,0 +1,34 @@
+h1 Socket status: 
+	span([class]="socketConnected?'text-success':'text-danger'") {{ socketConnected ? "Connected" : "Disconnected" }}
+h4([hidden]='!socketConnected') Connected to 
+	code {{socketUrl}}
+div([hidden]='socketConnected')
+	.input-group
+		span.input-group-addon: b Socket address:
+		input.form-control(type='text', [(ngModel)]='socketUrl')
+		span.input-group-btn: button.btn.btn-success((click)='connect()') Connect
+div([hidden]='!socketConnected')
+	.col-sm-6.offset-sm-3
+		h2 Time Set
+		.input-group
+			span.input-group-addon Min:
+			input.form-control(type='number', [(ngModel)]='min')
+			span.input-group-addon Sek:
+			input.form-control(type='number', [(ngModel)]='sec')
+			span.input-group-addon Dec:
+			input.form-control(type='number', [(ngModel)]='msec')
+			span.input-group-addon Perioda:
+			input.form-control(type='text', [(ngModel)]='per')
+			span.input-group-btn
+				button.btn.btn-success((click)='setTime()') Send
+		h2 Result Set
+		.input-group
+			span.input-group-addon Home:
+			input.form-control(type='number', [(ngModel)]='scoreHome')
+			span.input-group-addon Away:
+			input.form-control(type='number', [(ngModel)]='scoreAway')
+			span.input-group-btn
+				button.btn.btn-success((click)='setScore()') Send
+		h2 Enable/Disable stuff
+		h2
+			code SOON™

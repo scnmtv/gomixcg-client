@@ -1,0 +1,44 @@
+// Copied from bootstrap.scss in node_modules/bootstrap/scss/bootstrap.scss
+// Comment-out/remove lines below to exclude features for lighter builds
+
+@import "custom";
+@import "variables";
+@import "mixins";
+
+@import "normalize";
+@import "print";
+
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+
+@import "animation";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "tags";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "responsive-embed";
+@import "close";
+
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+
+@import "utilities";

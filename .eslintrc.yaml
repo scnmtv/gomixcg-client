@@ -1,0 +1,34 @@
+# root eslint configuration for the project
+# see: http://eslint.org/docs/user-guide/ for further details
+---
+env:
+  es6:  true
+  node: true
+
+extends: google
+
+rules:
+  indent:
+    - error
+    - tab
+  curly:
+    - warn
+    - multi
+  comma-dangle:
+    - warn
+    - always-multiline
+  max-len:
+    - warn
+    - 80
+    - 2
+  no-multi-spaces:
+    - error
+    - exceptions:
+        VariableDeclarator: true
+        Property: true
+        ImportDeclaration: true
+  require-jsdoc: off
+
+  # es6 specific rules
+  constructor-super: error
+  no-const-assign: error

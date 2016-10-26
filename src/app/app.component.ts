@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import * as io from "socket.io-client";
 @Component({
   selector: 'go-cg',
-  templateUrl: 'app/app.component.html'
+  templateUrl: 'app/app.component.pug'
 })
-export class  CGGoComponent {
+export class CGGoComponent {
     socket: SocketIOClient.Socket;
     socketUrl: string = 'http://localhost:8081';
     socketConnected: boolean = false;
