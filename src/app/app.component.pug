@@ -31,4 +31,12 @@ div([hidden]='!socketConnected')
 				button.btn.btn-success((click)='setScore()') Send
 		h2 Enable/Disable stuff
 		h2
-			code SOON™
+			.input-group
+				span.input-group-btn: button.btn.btn-success.btn-block((click)='vmix(true)') VMix on
+				span.input-group-btn: button.btn.btn-danger.btn-block((click)='vmix(false)') VMix off
+			.input-group
+				span.input-group-btn: button.btn.btn-success.btn-block((click)='caspar(true)') Caspar on
+				span.input-group-btn: button.btn.btn-danger.btn-block((click)='caspar(false)') Caspar off
+			.input-group
+				span.input-group-btn: button.btn.btn-success.btn-block((click)='hdmi(true)') HDMI on
+				span.input-group-btn: button.btn.btn-danger.btn-block((click)='hdmi(false)') HDMI off
