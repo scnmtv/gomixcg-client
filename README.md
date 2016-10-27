@@ -2,7 +2,10 @@
 
 ### Usage
 ```bash
+# setup
+$ npm install -g webpack webpack-dev-server typescript typings
 $ npm install
+$ typings install
 
 # npm scripts
 $ npm run make           # compiles the app to dist/
